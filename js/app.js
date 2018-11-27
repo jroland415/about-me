@@ -22,3 +22,25 @@ if(guessSiblings === 'Y') {
 } else {
   alert('Please enter Y or N.');
 }
+
+var guessMoves = prompt('Have I moved more than 5 times in my life? Please enter Y or N.');
+guessMoves = guessMoves.toUpperCase();
+
+if(guessMoves === 'Y') {
+  alert('Correct. I have moved 15 times.');
+} else if(guessMoves === 'N') {
+  alert('That is incorrect. I have moved 15 times.');
+} else {
+  alert('Please enter Y or N.');
+}
+
+var guessFood = prompt('Is chocolate the most addictive food in my life? Please enter Y or N.');
+guessFood = guessFood.toUpperCase();
+
+if(guessFood === 'Y') {
+  alert('Incorrect. Recently, I have learned that cheese is my greatest food addiction.');
+} else if(guessFood === 'N') {
+  alert('Correct! Cheese tops my list of addictive foods.');
+} else {
+  alert('Please enter Y or N.');
+}
