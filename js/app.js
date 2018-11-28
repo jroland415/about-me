@@ -41,14 +41,14 @@ if(guessFirstWord === 'Y') {
   alert('Your response is invalid. You should have entered Y or N.');
 }
 
-var guessMoves = prompt('Have I moved more than 5 times in my life? Please enter Y or N.');
-guessMoves = guessMoves.toUpperCase();
-console.log('Moved more than 5 times? : ' + guessMoves);
+var guessTravel = prompt('Have I ever lived in another country? Please enter Y or N.');
+guessTravel = guessTravel.toUpperCase();
+console.log('Ever lived in another country? : ' + guessTravel);
 
-if(guessMoves === 'Y') {
-  alert('Correct. I have moved 15 times.');
-} else if(guessMoves === 'N') {
-  alert('That is incorrect. I have moved 15 times.');
+if(guessTravel === 'Y') {
+  alert('Correct. I lived in Japan for 3 years.');
+} else if(guessTravel === 'N') {
+  alert('That is incorrect. I lived in Japan for 3 years.');
 } else {
   alert('Your response is invalid. You should have entered Y or N.');
 }
@@ -63,4 +63,21 @@ if(guessFood === 'Y') {
   alert('Correct! Cheese tops my list of addictive foods.');
 } else {
   alert('Your response is invalid. You should have entered Y or N.');
+}
+
+var guessMoves = prompt('How many times have I moved in my life?');
+guessMoves = parseInt(guessMoves);
+console.log('How many moves? : ' + guessMoves);
+
+for(var i = 0; i < 4; i++) {
+  if(guessMoves === 15) {
+    alert('That\'s correct! Good guess!');
+    break;
+  } else if(guessMoves < 15) {
+    prompt('That guess is too low. Try again.');
+  } else if(guessMoves > 15) {
+    prompt('That guess is too high. Try again.');
+  } else {
+    prompt('Not a valid guess. Try again.');
+  }
 }
