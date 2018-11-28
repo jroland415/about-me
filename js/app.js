@@ -65,19 +65,38 @@ if(guessFood === 'Y') {
   alert('Your response is invalid. You should have entered Y or N.');
 }
 
-var guessMoves = prompt('How many times have I moved in my life?');
-guessMoves = parseInt(guessMoves);
-console.log('How many moves? : ' + guessMoves);
-
 for(var i = 0; i < 4; i++) {
+  var guessMoves = prompt('How many times have I moved in my life?');
+  guessMoves = parseInt(guessMoves);
+  console.log('How many moves? : ' + guessMoves);
   if(guessMoves === 15) {
     alert('That\'s correct! Good guess!');
     break;
   } else if(guessMoves < 15) {
-    prompt('That guess is too low. Try again.');
+    alert('That guess is too low. Try again.');
   } else if(guessMoves > 15) {
-    prompt('That guess is too high. Try again.');
+    alert('That guess is too high. Try again.');
   } else {
-    prompt('Not a valid guess. Try again.');
+    alert('Not a valid guess. Try again.');
   }
 }
+
+var statesLived = ['virginia', 'north carolina', 'nebraska', 'georgia', 'maryland'];
+
+for(var i = 0; i < 6; i++) {
+  var guessStatesLived = prompt('Guess a state where I have lived \(besides Washington\).').toLowerCase();
+  console.log('States lived in? : ' + guessStatesLived);
+  for(var j = 0; j < statesLived.length; j++) {
+    if(guessStatesLived === statesLived[j]) {
+      alert('That is correct. I have lived in Virginia, North Carolina, Nebraska, Georgia and Maryland.');
+      var guessTruth = true;
+      break;
+    }
+  }
+  if(guessTruth === true) {
+    break;
+  } else {
+    alert('That response is incorrect or invalid. Please try again.');
+  }
+}
+alert('I have lived in Virginia, North Carolina, Nebraska, Georgia and Maryland.');
