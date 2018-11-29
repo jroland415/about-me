@@ -1,8 +1,26 @@
 body {
   background-color: cadetblue;
-  margin: 20px;
-  font-size: 40px;
-  font-style: italic
+  margin: 40px;
+  text-align: justify;
 }
-  
-  
+h1 {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+} 
+h2 {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+p, ul, ol {
+  font-size: 18px;
+  font-style: italic;
+}
+ul {
+  list-style: inside;
+}
+ol {
+  list-style: inside;
+  list-style-type: decimal;
+}
