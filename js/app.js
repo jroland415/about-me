@@ -3,6 +3,7 @@
 var userName = prompt('Hello! What is your name?');
 alert('Let\'s play a guessing game, ' + userName + '!');
 console.log('Username: ' + userName);
+var countCorrect = 0;
 
 //user responses will be changed to upper case for consistency in conditional statements
 var guessAge = prompt('Am I over 40 years old? Please enter Y or N.');
@@ -13,6 +14,7 @@ if(guessAge === 'Y') {
   alert('Not yet...I am 34 years old.');
 } else if(guessAge === 'N') {
   alert('You are correct. I am only 34 years old.');
+  countCorrect++;
 } else {
   alert('Your response is invald. You should have entered Y or N.');
 }
@@ -23,6 +25,7 @@ console.log('Do I have siblings? : ' + guessSiblings);
 
 if(guessSiblings === 'Y') {
   alert('You are correct. I have a younger brother.');
+  countCorrect++;
 } else if(guessSiblings === 'N') {
   alert('Incorrect. I have a younger brother.');
 } else {
@@ -37,6 +40,7 @@ if(guessFirstWord === 'Y') {
   alert('You guessed incorrectly. My first word was \'fry\'.');
 } else if(guessFirstWord === 'N') {
   alert('You guessed correctly. My first word was \'fry\'.');
+  countCorrect++;
 } else {
   alert('Your response is invalid. You should have entered Y or N.');
 }
@@ -47,6 +51,7 @@ console.log('Ever lived in another country? : ' + guessTravel);
 
 if(guessTravel === 'Y') {
   alert('Correct. I lived in Japan for 3 years.');
+  countCorrect++;
 } else if(guessTravel === 'N') {
   alert('That is incorrect. I lived in Japan for 3 years.');
 } else {
@@ -61,6 +66,7 @@ if(guessFood === 'Y') {
   alert('Incorrect. Recently, I have learned that cheese is my greatest food addiction.');
 } else if(guessFood === 'N') {
   alert('Correct! Cheese tops my list of addictive foods.');
+  countCorrect++;
 } else {
   alert('Your response is invalid. You should have entered Y or N.');
 }
@@ -71,6 +77,7 @@ for(var i = 0; i < 4; i++) {
   console.log('How many moves? : ' + guessMoves);
   if(guessMoves === 15) {
     alert('That\'s correct! Good guess!');
+    countCorrect++;
     break;
   } else if(guessMoves < 15) {
     alert('That guess is too low. Try again.');
@@ -80,6 +87,7 @@ for(var i = 0; i < 4; i++) {
     alert('Not a valid guess. Try again.');
   }
 }
+alert('I have moved 15 times.');
 
 var statesLived = ['virginia', 'north carolina', 'nebraska', 'georgia', 'maryland'];
 
@@ -88,7 +96,8 @@ for(var i = 0; i < 6; i++) {
   console.log('States lived in? : ' + guessStatesLived);
   for(var j = 0; j < statesLived.length; j++) {
     if(guessStatesLived === statesLived[j]) {
-      alert('That is correct. I have lived in Virginia, North Carolina, Nebraska, Georgia and Maryland.');
+      alert('That is correct.');
+      countCorrect++;
       var guessTruth = true;
       break;
     }
@@ -100,3 +109,11 @@ for(var i = 0; i < 6; i++) {
   }
 }
 alert('I have lived in Virginia, North Carolina, Nebraska, Georgia and Maryland.');
+console.log('Number of correct answers : ' + countCorrect);
+if(countCorrect === 7) {
+  alert('Fantastic ' + userName + '! You scored 7 out of 7!');
+} else if(countCorrect === 5 || countCorrect === 6) {
+  alert('You did pretty well, ' + userName + '. You scored' + countCorrect + ' out of 7.');
+} else {
+  alert('You scored ' + countCorrect + ' out of 7. Better luck next time, ' + userName + '.');
+}
