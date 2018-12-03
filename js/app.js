@@ -4,8 +4,8 @@ var userName = prompt('Hello! What is your name?');
 alert('Let\'s play a guessing game, ' + userName + '!');
 console.log('Username: ' + userName);
 var countCorrect = 0;
-
 //user responses will be changed to upper case for consistency in conditional statements
+
 function howOld() { 
   var guessAge = prompt('Am I over 40 years old? Please enter Y or N.');
   guessAge = guessAge.toUpperCase();
